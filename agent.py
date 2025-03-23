@@ -85,7 +85,7 @@ def generate_final_response(query: str) -> str:
     
     elif decision == "generic":
         final_prompt = (
-            f"Compose a friendly weather advice message for the following query without using live data: {query}."
+            f"Compose a friendly weather advice for the following query without using live data: {query}."
         )
         if is_bangla(query):
             final_prompt += " Please answer in Bangla."
@@ -93,7 +93,7 @@ def generate_final_response(query: str) -> str:
         return final_response.content.strip()
     
     else:
-        return "I'm sorry, but I only handle weather-related queries."
+        return "I apologize for not answering your question. I am only serve weather related questions."
 
 # # Optional testing
 # if __name__ == "__main__":
